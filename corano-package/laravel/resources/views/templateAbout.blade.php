@@ -109,76 +109,15 @@
                      <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
                      <div class="collapse navbar-collapse scroll-nav">
                         <ul class="navbar-nav navbar-mobile navbar_left  ml-auto" id="nav">
-                           <li class="nav-item nav_item  dropdown">
+                           <li class="nav-item nav-item">
                               <a class="nav-link link_hd" href="/">  Home  </a>
-                              <ul class="navbar-nav submenu">
-                                 <li class="nav-item"><a class="nav-link" href="/">Home Default 01</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="one-page-index-1.html">Home Onepage Version</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="rtl/index.html" target="_blank">Home Default RTL </a></li>
-                                 <li class="nav-item"><a class="nav-link" href="rtl/one-page-index-1.html">Home Onepage RTL</a></li>
-                              </ul>
                            </li>
-                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="about">About </a></li>
-                           <li class="nav-item nav_item dropdown">
-                              <a class="nav-link link_hd" href="#">  Prevention  </a>
-                              <ul class="navbar-nav submenu">
-                                 <li class="nav-item"><a class="nav-link" href="prevention.html">Prevention</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="prevention-single.html">Prevention Detail</a></li>
-                              </ul>
-                           </li>
-                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="team.html">Doctors</a></li>
-                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="faq.html">Faq's</a></li>
-                           <li class="nav-item nav_item dropdown">
-                              <a class="nav-link link_hd" href="#">  Blog  </a>
-                              <ul class="navbar-nav submenu">
-                                 <li class="nav-item dropdown">
-                                    <a class="nav-link arrow" href="#">Blog Grid </a>
-                                    <ul class="navbar-nav child_menu">
-                                       <li class="nav-item"><a class="nav-link" href="blog-three-column.html">Blog Three Column</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="blog-four-column.html">Blog Four Column</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog With Sidebar</a></li>
-                                    </ul>
-                                 </li>
-                                 <li class="nav-item dropdown">
-                                    <a class="nav-link arrow" href="#">Blog Details </a>
-                                    <ul class="navbar-nav child_menu">
-                                       <li class="nav-item"><a class="nav-link" href="blog-detail-sidebar.html">With Sidebar</a></li>
-                                       <li class="nav-item"><a class="nav-link" href="blog-detail.html">Without Sidebar</a></li>
-                                    </ul>
-                                 </li>
-                              </ul>
-                           </li>
-                           <li class="nav-item nav_item dropdown">
-                              <a class="nav-link link_hd" href="#">  Shop  </a>
-                              <ul class="navbar-nav submenu">
-                                 <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="product-details.html">Product Details</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="shop-cart.html">cart</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="checkout.html">checkout</a></li>
-                              </ul>
-                           </li>
-                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="contact.html">Contact</a></li>
-                        </ul>
-                        <ul class="navbar-nav navbar-mobile navbar_right">
-                           <li class="nav-item  dropdown">
-                              <a href="#" class="cart_btn"><i class="flaticon-add-to-cart icon"></i></a>
-                           </li>
-                           <li class="nav-item  dropdown">
-                              <a href="#" class="topbar-one__search search-popup__toggler"><i class="flaticon-search icon"></i></a>
-                           </li>
-                           <li class="nav-item  dropdown">
-                              <!-- /.site-header__cart -->
-                              <a href="#" class="site-header__sidemenu-nav side-menu__toggler">
-                                 <span class="site-header__sidemenu-nav-line"></span>
-                                 <!-- /.site-header__sidemenu-nav-line -->
-                                 <span class="site-header__sidemenu-nav-line"></span>
-                                 <!-- /.site-header__sidemenu-nav-line -->
-                                 <span class="site-header__sidemenu-nav-line"></span>
-                                 <!-- /.site-header__sidemenu-nav-line -->
-                                 <!-- /.site-header__sidemenu -->
-                              </a>
-                           </li>
-                        </ul>
+                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
+                           <li class="nav-item nav-item"><a class="nav-link link_hd" href="#">CRUD</a></li>
+                           <li class="nav-item nav-item"><a class="nav-link link_hd" href="#">  Data terkini  </a> </li>
+                           <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
+                          </ul>
+                        
                      </div>
                   </div>
                </div>
@@ -196,7 +135,7 @@
                               <li class="bread_crumb-item"><a href="#">Home</a></li>
                               <li class="bread_crumb-item active"> About Corano</li>
                            </ul>
-                           <h1>About Corano</h1>
+                           <h1>Tentang Corona</h1>
                         </div>
                      </div>
                   </div>
@@ -212,29 +151,28 @@
                            <span class="flaticon-virus icon"></span>
                         </div>
                         <div class="about_content">
-                           <p class="description">It is a long established fact that a reader will be distracted . The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                              like readable English.
-                           </p>
+                           <p class="description">Infeksi virus Corona disebut COVID-19 (Corona Virus Disease 2019) dan pertama kali ditemukan di kota Wuhan, China pada akhir Desember 2019. Virus ini menular dengan sangat cepat dan telah menyebar ke hampir semua negara, termasuk Indonesia, hanya dalam waktu beberapa bulan.</p>
                            <div class="symptoms">
-                              <h2>The best way to prevent illness is to avoid being exposed to this virus.</h2>
+                              <h2>Cara terbaik untuk mencegah terhindar dari virus covid-19.</h2>
                               <div class="row">
                                  <div class="col-lg-6">
                                     <ul>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Clean AND disinfect frequently touched surfaces </p>
+                                          <p>Bersihkan tangan Anda secara rutin</p>
                                        </li>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Avoid touching your eyes, nose, and mouth</p>
+                                          <p>Hindari menyentuh mata, hidung, dan mulut Anda</p>
                                        </li>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Clean your hands with a hand sanitizer </p>
+                                          <p>Selalu jaga jarak yang aman dengan orang yang batuk atau bersin.</p>
                                        </li>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Cover coughs and sneezes</p>
+                                          <p>Tutupi batuk dan bersin
+                                          </p>
                                        </li>
                                     </ul>
                                  </div>
@@ -242,29 +180,25 @@
                                     <ul>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Stay home if you’re sick</p>
+                                          <p>Tetaplah di rumah jika Anda merasa tidak enak badan.</p>
                                        </li>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Wear a facemask if sick</p>
+                                          <p>Kenakan masker wajah jika sakit</p>
                                        </li>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Cover your mouth and nose </p>
+                                          <p>Tutupi hidung dan mulut anda </p>
                                        </li>
                                        <li>
                                           <span class="flaticon-check"></span>
-                                          <p>Throw used tissues in trash</p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Ensure solution has at least 70% alcohol.</p>
+                                          <p>Jika Anda demam, batuk, atau kesulitan bernapas segera cari bantuan medis. Hubungi terlebih dahulu.
+                                          </p>
                                        </li>
                                     </ul>
                                  </div>
                               </div>
                            </div>
-                           <a href="#" class="theme_btn tp_one">Read More</a>
                         </div>
                      </div>
                      <div class="col-lg-6">
@@ -275,8 +209,8 @@
                                     <img src="assets/image/svg/working-at-home.svg" class="img-fluid svg_image" alt="home" /> <span class="flaticon-virus "></span>
                                  </div>
                                  <div class="content_box">
-                                    <h2><a href="#">Stay at Home</a></h2>
-                                    <p>It is a long established fact that a reader will be distracted . </p>
+                                    <h2><a href="#">Diam dirumah</a></h2>
+                                    <p>Membantu untuk memutuskan rantai virus covid-19.</p>
                                  </div>
                               </div>
                               <div class="icon_box type_one wow slideInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
@@ -284,8 +218,8 @@
                                     <img src="assets/image/svg/mask-2.svg" class="img-fluid svg_image" alt="home" /> <span class="flaticon-virus "></span>
                                  </div>
                                  <div class="content_box">
-                                    <h2><a href="#">Protect yourself</a></h2>
-                                    <p>It is a long established fact that a reader will be distracted . </p>
+                                    <h2><a href="#">Lindungi dirimu sendiri</a></h2>
+                                    <p>Rajin mencuci tangan dan kebersihan dirumah</p>
                                  </div>
                               </div>
                            </div>
@@ -295,8 +229,8 @@
                                     <img src="assets/image/svg/sport-team.svg" class="img-fluid svg_image" alt="home" /> <span class="flaticon-virus "></span>
                                  </div>
                                  <div class="content_box">
-                                    <h2><a href="#">Be Supportive</a></h2>
-                                    <p>It is a long established fact that a reader will be distracted . </p>
+                                    <h2><a href="#">Selalu mendukung</a></h2>
+                                    <p>Positifkan lah kegiatan harimu dengan saling mendukung disekitarmu! </p>
                                  </div>
                               </div>
                               <div class="icon_box type_one last wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
@@ -304,8 +238,8 @@
                                     <img src="assets/image/svg/smartphone.svg" class="img-fluid svg_image" alt="svg" /> <span class="flaticon-virus "></span>
                                  </div>
                                  <div class="content_box">
-                                    <h6>Emergency Contact</h6>
-                                    <h2><a href="#">(555) 555-1234</a></h2>
+                                    <h6>Contact darurat</h6>
+                                    <h2><a href="#">119</a></h2>
                                  </div>
                               </div>
                            </div>
@@ -314,57 +248,11 @@
                   </div>
                </div>
             </section>
-            <section class="funfacts type_one">
+            <section class="funfacts type_three">
                <div class="container">
-                  <div class="row">
-                     <div class="col-lg-12">
-                        <div class="heading tp_one text-center text_white icon_dark">
-                           <h6>Funfacts</h6>
-                           <span class="flaticon-virus icon"></span>
-                           <h1>Keep Your Headup & Be Patient</h1>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="about_fun_facts">
-                     <div class="row">
-                        <div class="col-lg-3">
-                           <div class="fun_facts_box type_one">
-                              <div class="icon">
-                                 <img src="assets/image/svg/virus.svg" class="img-fluid svg_image" alt="home" />
-                              </div>
-                              <h2><span class="counter-value">434595</span>+</h2>
-                              <h6>Total Confirmed</h6>
-                           </div>
-                        </div>
-                        <div class="col-lg-3">
-                           <div class="fun_facts_box type_one">
-                              <div class="icon">
-                                 <img src="assets/image/svg/partnership.svg" class="img-fluid svg_image" alt="home" />
-                              </div>
-                              <h2><span class="counter-value" data-count="">170</span></h2>
-                              <h6>Countries / Regions</h6>
-                           </div>
-                        </div>
-                        <div class="col-lg-3">
-                           <div class="fun_facts_box type_one">
-                              <div class="icon">
-                                 <img src="assets/image/svg/man.svg" class="img-fluid svg_image" alt="home" />
-                              </div>
-                              <h2><span class="counter-value">111853</span>+</h2>
-                              <h6>Total Recoverd</h6>
-                           </div>
-                        </div>
-                        <div class="col-lg-3">
-                           <div class="fun_facts_box type_one last">
-                              <div class="icon">
-                                 <img src="assets/image/svg/tombstones.svg" class="img-fluid svg_image" alt="home" />
-                              </div>
-                              <h2><span class="counter-value">19603</span>+</h2>
-                              <h6>Confirmed Deaths</h6>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  <div class="embed-responsive embed-responsive-16by9">
+                     <iframe class="embed-responsive-item" src="https://youtube.com/embed/ftNCj06d7KE" allowfullscreen></iframe>
+                   </div>
                </div>
             </section>
             <section class="doctor type_one bg_white">
@@ -372,8 +260,8 @@
                   <div class="row">
                      <div class="col-lg-12 ">
                         <div class="heading   tp_one">
-                           <h6>Doctors</h6>
-                           <h1>Meet Our Best Doctors</h1>
+                           <h6>Rumah sakit</h6>
+                           <h1>Rujukan rumah sakit covid-19</h1>
                            <span class="flaticon-virus icon"></span>
                         </div>
                      </div>
@@ -383,61 +271,31 @@
                         <div class="owl-carousel three_items">
                            <div class="doctor_box type_one ">
                               <div class="image_box">
-                                 <img src="assets/image/resources/best-doctors1.jpg" class="img-fluid" alt="best-doctors" />
-                                 <div class="overlay">
-                                    <ul>
-                                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                       <li><a href="#"><i class="fa fa fa-vimeo"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                                    </ul>
-                                 </div>
+                                 <img src="assets/image/download.jpeg" class="img-fluid" alt="best-doctors" />
                               </div>
                               <div class="content_box">
-                                 <a href="#" class="contact_doctor"><span class="fa fa-phone"></span>+44 555 67 890</a>
-                                 <h2> <a href="#">Dr. Genoveva Leannon </a> </h2>
-                                 <small>Internal Medicine</small>
+                                 <h2> <a href="#">RSU Dr Hasan Sadikin </a> </h2>
+                                 <small>Rumah sakit</small>
                                  <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
                               </div>
                            </div>
                            <div class="doctor_box type_one ">
                               <div class="image_box">
-                                 <img src="assets/image/resources/best-doctors2.jpg" class="img-fluid" alt="best-doctors" />
-                                 <div class="overlay">
-                                    <ul>
-                                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                       <li><a href="#"><i class="fa fa fa-vimeo"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                                    </ul>
-                                 </div>
+                                 <img src="assets/image/download1.jpeg" class="img-fluid" alt="best-doctors" />
                               </div>
                               <div class="content_box">
-                                 <a href="#" class="contact_doctor"><span class="fa fa-phone"></span>+44 555 67 890</a>
-                                 <h2> <a href="#">Alen Bailey </a> </h2>
-                                 <small>Head Doctor</small>
+                                 <h2> <a href="#">RSPI Dr. Sulianti Saroso </a> </h2>
+                                 <small>Rumah sakit </small>
                                  <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
                               </div>
                            </div>
                            <div class="doctor_box type_one">
                               <div class="image_box">
-                                 <img src="assets/image/resources/best-doctors3.jpg" class="img-fluid" alt="best-doctors" />
-                                 <div class="overlay">
-                                    <ul>
-                                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                                       <li><a href="#"><i class="fa fa fa-vimeo"></i></a></li>
-                                       <li><a href="#"><i class="fa fa-share-alt"></i></a></li>
-                                    </ul>
-                                 </div>
+                                 <img src="assets/image/jakarta.jpeg" class="img-fluid" alt="best-doctors" />
                               </div>
                               <div class="content_box">
-                                 <a href="#" class="contact_doctor"><span class="fa fa-phone"></span>+44 555 67 890</a>
-                                 <h2> <a href="#">Dr. Basil Andrew </a> </h2>
-                                 <small>Chief Doctor </small>
+                                 <h2> <a href="#">RSUP Fatmawati </a> </h2>
+                                 <small>Rumah sakit </small>
                                  <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
                               </div>
                            </div>
