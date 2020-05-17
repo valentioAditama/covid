@@ -21,5 +21,9 @@ class PagesController extends Controller
     public function Crud(){
         return view('Crud');
     }
+
+    public function DataTerkini(){
+        return view('DataTerkini');
+    }
     
 }

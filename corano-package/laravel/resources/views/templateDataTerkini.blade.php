@@ -14,7 +14,7 @@
       <!-- Responsive -->
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <title>About | Corano | Responsive HTML 5 Template</title>
+      <title>Blog Three Column | Corano | Responsive HTML 5 Template</title>
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" type="text/css" href="assets/fonts/font/flaticon.css">
@@ -103,203 +103,177 @@
                </div>
             </section>
             <section class="navbar_outer">
-               <div class="navbar navbar-expand-lg  bsnav bsnav-sticky bsnav-sticky-slide">
-                  <div class="container">
-                     <a class="navbar-brand" href="/"><img src="assets/image/home-1-logo.png" class="img-fluid" alt="img"></a>
-                     <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
-                     <div class="collapse navbar-collapse scroll-nav">
-                        <ul class="navbar-nav navbar-mobile navbar_left  ml-auto" id="nav">
-                           <li class="nav-item nav-item">
-                              <a class="nav-link link_hd" href="/">  Home  </a>
-                           </li>
-                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
-                           <li class="nav-item nav-item"><a class="nav-link link_hd" href="/crud">CRUD</a></li>
-                           <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
-                           <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
-                          </ul>
-                        
-                     </div>
-                  </div>
-               </div>
-            </section>
+                <div class="navbar navbar-expand-lg  bsnav bsnav-sticky bsnav-sticky-slide">
+                   <div class="container">
+                      <a class="navbar-brand" href="/"><img src="assets/image/home-1-logo.png" class="img-fluid" alt="img"></a>
+                      <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
+                      <div class="collapse navbar-collapse scroll-nav">
+                         <ul class="navbar-nav navbar-mobile navbar_left  ml-auto" id="nav">
+                            <li class="nav-item nav-item">
+                               <a class="nav-link link_hd" href="/">  Home  </a>
+                            </li>
+                            <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
+                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="/crud">Data</a></li>
+                            <li class="nav-item nav-item"><a class="nav-link link_hd active" href="/dataTerkini">  Data terkini  </a> </li>
+                            <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
+                           </ul>
+                         
+                      </div>
+                   </div>
+                </div>
+             </section>
          </header>
          <!--Header-->
          <!------main-content------>
          <main class="main-content">
-            <section class="page_title">
+            <section class="funfacts type_two">
                <div class="container">
-                  <div class="row">
-                     <div class="col-lg-12 d-flex">
-                        <div class="content_box">
-                           <ul class="bread_crumb text-center">
-                              <li class="bread_crumb-item"><a href="#">Home</a></li>
-                              <li class="bread_crumb-item active"> About Corano</li>
-                           </ul>
-                           <h1>Tentang Corona</h1>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <section class="about type_one">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-6">
-                        <div class="heading icon_dark tp_one">
-                           <h6>about Corona</h6>
-                           <h1>Coronavirus Disease 2019 (COVID-19)</h1>
-                           <span class="flaticon-virus icon"></span>
-                        </div>
-                        <div class="about_content">
-                           <p class="description">Infeksi virus Corona disebut COVID-19 (Corona Virus Disease 2019) dan pertama kali ditemukan di kota Wuhan, China pada akhir Desember 2019. Virus ini menular dengan sangat cepat dan telah menyebar ke hampir semua negara, termasuk Indonesia, hanya dalam waktu beberapa bulan.</p>
-                           <div class="symptoms">
-                              <h2>Cara terbaik untuk mencegah terhindar dari virus covid-19.</h2>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <ul>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Bersihkan tangan Anda secara rutin</p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Hindari menyentuh mata, hidung, dan mulut Anda</p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Selalu jaga jarak yang aman dengan orang yang batuk atau bersin.</p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Tutupi batuk dan bersin
-                                          </p>
-                                       </li>
-                                    </ul>
-                                 </div>
-                                 <div class="col-lg-6">
-                                    <ul>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Tetaplah di rumah jika Anda merasa tidak enak badan.</p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Kenakan masker wajah jika sakit</p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Tutupi hidung dan mulut anda </p>
-                                       </li>
-                                       <li>
-                                          <span class="flaticon-check"></span>
-                                          <p>Jika Anda demam, batuk, atau kesulitan bernapas segera cari bantuan medis. Hubungi terlebih dahulu.
-                                          </p>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
+                  <div class="about_fun_facts">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                           <div class="fun_facts_box type_two">
+                              <h2><span class="counter-value">434595 </span>+</h2>
+                              <h6>Total Confirmed</h6>
                            </div>
                         </div>
-                     </div>
-                     <div class="col-lg-6">
-                        <div class="row">
-                           <div class="col-lg-6 first_column">
-                              <div class="icon_box type_one wow slideInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                 <div class="icon">
-                                    <img src="assets/image/svg/working-at-home.svg" class="img-fluid svg_image" alt="home" /> <span class="flaticon-virus "></span>
-                                 </div>
-                                 <div class="content_box">
-                                    <h2><a href="#">Diam dirumah</a></h2>
-                                    <p>Membantu untuk memutuskan rantai virus covid-19.</p>
-                                 </div>
-                              </div>
-                              <div class="icon_box type_one wow slideInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                 <div class="icon">
-                                    <img src="assets/image/svg/mask-2.svg" class="img-fluid svg_image" alt="home" /> <span class="flaticon-virus "></span>
-                                 </div>
-                                 <div class="content_box">
-                                    <h2><a href="#">Lindungi dirimu sendiri</a></h2>
-                                    <p>Rajin mencuci tangan dan kebersihan dirumah</p>
-                                 </div>
-                              </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                           <div class="fun_facts_box type_two">
+                              <h2><span class="counter-value">170</span>+</h2>
+                              <h6>Countries / Regions</h6>
                            </div>
-                           <div class="col-lg-6 second_column">
-                              <div class="icon_box type_one wow slideInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                 <div class="icon">
-                                    <img src="assets/image/svg/sport-team.svg" class="img-fluid svg_image" alt="home" /> <span class="flaticon-virus "></span>
-                                 </div>
-                                 <div class="content_box">
-                                    <h2><a href="#">Selalu mendukung</a></h2>
-                                    <p>Positifkan lah kegiatan harimu dengan saling mendukung disekitarmu! </p>
-                                 </div>
-                              </div>
-                              <div class="icon_box type_one last wow slideInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                                 <div class="icon">
-                                    <img src="assets/image/svg/smartphone.svg" class="img-fluid svg_image" alt="svg" /> <span class="flaticon-virus "></span>
-                                 </div>
-                                 <div class="content_box">
-                                    <h6>Contact darurat</h6>
-                                    <h2><a href="#">119</a></h2>
-                                 </div>
-                              </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                           <div class="fun_facts_box type_two">
+                              <h2><span class="counter-value">10</span>%</h2>
+                              <h6>Total Recoverd</h6>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                           <div class="fun_facts_box type_two last">
+                              <h2><span class="counter-value">80</span>%</h2>
+                              <h6>Confirmed Deaths</h6>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
             </section>
-            <section class="funfacts type_three">
-               <div class="container">
-                  <div class="embed-responsive embed-responsive-16by9">
-                     <iframe class="embed-responsive-item" src="https://youtube.com/embed/ftNCj06d7KE" allowfullscreen></iframe>
-                   </div>
-               </div>
-            </section>
-            <section class="doctor type_one bg_white">
+            <!-----------------breadcrumb------------------------>
+            <section class="blog_grid ">
                <div class="container">
                   <div class="row">
-                     <div class="col-lg-12 ">
-                        <div class="heading   tp_one">
-                           <h6>Rumah sakit</h6>
-                           <h1>Rujukan rumah sakit covid-19</h1>
-                           <span class="flaticon-virus icon"></span>
+                     <div class="card-deck">
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/iBXt60rKmC4" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
-                     </div>
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/cTw92i-xmi4" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/6D74v9ABSIg" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                   <div class="row">
-                     <div class="col-lg-12 padding_zero">
-                        <div class="owl-carousel three_items">
-                           <div class="doctor_box type_one ">
-                              <div class="image_box">
-                                 <img src="assets/image/download.jpeg" class="img-fluid" alt="best-doctors" />
-                              </div>
-                              <div class="content_box">
-                                 <h2> <a href="#">RSU Dr Hasan Sadikin </a> </h2>
-                                 <small>Bandung</small>
-                                 <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
-                              </div>
-                           </div>
-                           <div class="doctor_box type_one ">
-                              <div class="image_box">
-                                 <img src="assets/image/download1.jpeg" class="img-fluid" alt="best-doctors" />
-                              </div>
-                              <div class="content_box">
-                                 <h2> <a href="#">RSPI Dr. Sulianti Saroso </a> </h2>
-                                 <small>Jakarta Utara </small>
-                                 <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
-                              </div>
-                           </div>
-                           <div class="doctor_box type_one">
-                              <div class="image_box">
-                                 <img src="assets/image/jakarta.jpeg" class="img-fluid" alt="best-doctors" />
-                              </div>
-                              <div class="content_box">
-                                 <h2> <a href="#">RSUP Fatmawati </a> </h2>
-                                 <small>Jakarta selatan </small>
-                                 <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
-                              </div>
-                           </div>
+                     <div class="card-deck">
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/StVDKWEW6yE" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
                         </div>
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/IW94L8Wg8ak" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/41HQZZoDr9w" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                     <div class="card-deck">
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/rExZ7KHtAV8" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/LD6z2fbo2W0" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                        <div class="card">
+                           <div class="embed-responsive embed-responsive-16by9">
+                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/bpVl1kNUBzE" allowfullscreen></iframe>
+                            </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-12 text-center pagination_column">
+                        <ul class="pagination">
+                           <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
+                           <li class="active"><a href="#">01 </a></li>
+                           <li><a href="#">02</a></li>
+                           <li><a href="#">03</a></li>
+                           <li><a href="#">04</a></li>
+                           <li><a href="#">05</a></li>
+                           <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
+                        </ul>
                      </div>
                   </div>
                </div>
@@ -510,10 +484,10 @@
       <script src="assets/js/bootstrap.min.js "></script>
       <script src="assets/js/bsnav.min.js "></script>
       <script src="assets/js/jquery-ui.js "></script>
-      <script src="assets/js/isotope.min.js "></script>
+
       <script src="assets/js/wow.js "></script>
       <script src="assets/js/owl.js "></script>
-      <script src="assets/js/jquery.fancybox.js "></script>
+      <script src="assets/js/odometer.min.js "></script>
       <script src="assets/js/TweenMax.min.js "></script>
       <script src="assets/js/validator.min.js "></script>
       <script src="assets/js/appear.js "></script>

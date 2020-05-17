@@ -114,7 +114,7 @@
                             </li>
                             <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
                             <li class="nav-item nav-item"><a class="nav-link link_hd" href="/crud">Data</a></li>
-                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="#">  Data terkini  </a> </li>
+                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
                             <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
                            </ul>
                          
