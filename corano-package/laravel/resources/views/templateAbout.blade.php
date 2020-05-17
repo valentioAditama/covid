@@ -275,7 +275,7 @@
                               </div>
                               <div class="content_box">
                                  <h2> <a href="#">RSU Dr Hasan Sadikin </a> </h2>
-                                 <small>Rumah sakit</small>
+                                 <small>Bandung</small>
                                  <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
                               </div>
                            </div>
@@ -285,7 +285,7 @@
                               </div>
                               <div class="content_box">
                                  <h2> <a href="#">RSPI Dr. Sulianti Saroso </a> </h2>
-                                 <small>Rumah sakit </small>
+                                 <small>Jakarta Utara </small>
                                  <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
                               </div>
                            </div>
@@ -295,7 +295,7 @@
                               </div>
                               <div class="content_box">
                                  <h2> <a href="#">RSUP Fatmawati </a> </h2>
-                                 <small>Rumah sakit </small>
+                                 <small>Jakarta selatan </small>
                                  <p>Dr. Will Marvin is an internist in Rochester, MN, and has been in practice between 5–10 years.</p>
                               </div>
                            </div>

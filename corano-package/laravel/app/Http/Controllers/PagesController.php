@@ -17,5 +17,9 @@ class PagesController extends Controller
     public function Tips(){
         return view('tips');
     }
+
+    public function Crud(){
+        return view('Crud');
+    }
     
 }
