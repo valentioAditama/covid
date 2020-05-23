@@ -14,10 +14,13 @@
       <!-- Responsive -->
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <title>Blog details | corano | Responsive HTML 5 Template</title>
+      <title>Data Meninggal</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" type="text/css" href="assets/fonts/font/flaticon.css">
+      <link rel="stylesheet" type="text/css" href="{{ url('assets/css') }}/font-awesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
       <!---------favicon--------------->
       <link rel="icon" type="image/png" href="assets/image/favicon-32x32.png" sizes="32x32">
       <link rel="icon" type="image/png" href="assets/image/favicon-16x16.png" sizes="16x16">
@@ -113,7 +116,16 @@
                                <a class="nav-link link_hd" href="/">  Home  </a>
                             </li>
                             <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
-                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="/crud">Data</a></li>
+                            <li class="nav-item nav-item dropdown">
+                              <a class="nav-link link_hd" href="/crud">Data</a>
+                              <ul class="navbar-nav submenu">
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/odp') }}">Data ODP</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/pdp') }}">Data PDP</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/positif') }}">Data Positif</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/sembuh') }}">Data Sembuh</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/meninggal') }}">Data Meninggal</a></li>
+                              </ul>
+                            </li>
                             <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
                             <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
                            </ul>
@@ -135,7 +147,7 @@
                               <li class="bread_crumb-item"><a href="#">Home</a></li>
                               <li class="bread_crumb-item active">Data</li>
                            </ul>
-                           <h1>Data pasien covid-19</h1>
+                           <h1>Data Pasien Meninggal</h1>
                         </div>
                      </div>
                   </div>
@@ -146,296 +158,189 @@
                   <div class="row">
                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <!--------list-of categories-------->
-                        <div class="blog_details_content">
-                           <div class="image_box">
+                        <div class="container">
+                           <div class="table-wrapper">
                               <div class="row">
-                                 <div class="col-lg-12">
-                                    <div class="owl-carousel one_items">
-                                       <div class="image">
-                                          <img src="assets/image/tenagamedis.png" class="img-fluid" alt="img" />
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <h2 class="heading">Masukan data pasien covid-19 untuk memberikan informasi kepada masyarakat </h2>
-                           <p class="description">The idea that beautiful and functional everyday objects should not only be affordable to the wealthy, but to all, is a core theme in the development of modernism and functionalism. This is probably most completely realized
-                              in post-WWII Scandinavian design. 
-                           </p>
-                           <div class="content_box">
-                              <p class="description">The ideological background was the emergence of a particular Scandinavian form of social democracy in the 1950s, as well as the increased availability of new low-cost materials and methods for mass production. Scandinavian
-                                 design often makes use of form-pressed wood, plastics, anodized or enameled aluminum or pressed steel.
-                              </p>
-                              <p class="description">The ideological background was the emergence of a particular Scandinavian form of social democracy in the 1950s, as well as the increased availability of new low-cost materials and methods for mass production. Scandinavian
-                                 design often makes use of form-pressed wood, plastics, anodized or enameled aluminum or pressed steel as well as the increased availability of new low-cost materials and methods for mass production. Scandinavian
-                                 design often makes use of form-pressed wood, plastics, anodized or enameled aluminum or pressed steel.
-                              </p>
-                              <p class="description">The ideological background was the emergence of a particular Scandinavian form of social democracy in the 1950s, as well as the increased availability of new low-cost materials and methods for mass production. Scandinavian
-                                 design often makes use of form-pressed wood, plastics, anodized or enameled aluminum or pressed steel.
-                              </p>
-                              <div class="quotes clearfix">
-                                 <div class="row">
-                                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
-                                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                                       <div class="para_quotes">
-                                          <span class="flaticon-quote"></span>
-                                          <p>The COVID-19 virus is a new virus linked to the same family of viruses as Severe Acute Respiratory Syndrome (SARS) and some types of common cold. </p>
-                                       </div>
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
-                                 </div>
-                              </div>
-                              <p>Many emphasize the democratic design ideals that were a central theme of the movement and are reflected in the rhetoric surrounding contemporary Scandinavian and international design.
-                              </p>
-                              <div class="authour_box clearfix">
-                                 <div class="authour_details">
-                                    <img src="assets/image/resources/review-1.png" class="img-fluid" alt="img" />
-                                    <div class="content_box">
-                                       <h2>Igor Ten</h2>
-                                       <span>Mar 07, 2020 </span>
-                                    </div>
-                                 </div>
-                                 <div class="media_icons">
-                                    <ul>
-                                       <li>Share:</li>
-                                       <li> <a><i class="fa fa-facebook"></i></a></li>
-                                       <li> <a><i class="fa fa-twitter"></i></a></li>
-                                       <li> <a><i class="fa fa-instagram"></i></a></li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <div class="media_tags text-center">
-                                 <ul class="tags">
-                                    <li>Tags:</li>
-                                    <li><a>Fashion</a>,</li>
-                                    <li><a>Minimalist</a>,</li>
-                                    <li><a>Clean</a></li>
-                                 </ul>
-                                 <ul class="media_status text-center">
-                                    <li>
-                                       <span class="btnn one"><a href="#"><i class="fa fa-thumbs-up icn"></i>Like</a></span>
-                                       <span class="one count-media">17</span>
-                                    </li>
-                                    <li>
-                                       <span class="btnn two"><a href="#"><i class="fa fa-twitter icn"></i>Twiter</a></span>
-                                       <span class="two  count-media">07</span>
-                                    </li>
-                                    <li>
-                                       <span class="btnn three"><a href="#"><i class="fa fa-instagram icn"></i>Share</a></span>
-                                       <span class="three count-media">21</span>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="blog_detail_comment">
-                              <div class="comment_inner">
-                                 <ul class="comment_heading">
-                                    <li>Comments (3)</li>
-                                    <li>Leave a comment</li>
-                                 </ul>
-                                 <div class="comment_content_outer">
-                                    <!----comment-----one--------------->
-                                    <div class="comment_content_inner">
-                                       <div class="image">
-                                          <img src="assets/image/resources/review-3.png" class="img-fluid" alt="img" />
-                                       </div>
-                                       <div class="content_text">
-                                          <ul>
-                                             <li class="first">Henry Little</li>
-                                             <li>Jan 07, 2020 </li>
-                                             <li> 07:45 </li>
-                                          </ul>
-                                          <h6>The idea that beautiful and functional everyday objects should not only be affordable to the wealthy</h6>
-                                          <span>Reply</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="comment_content_outer two">
-                                    <!----comment-----two--------------->
-                                    <div class="comment_content_inner">
-                                       <div class="image">
-                                          <img src="assets/image/resources/review-2.png" class="img-fluid" alt="img" />
-                                       </div>
-                                       <div class="content_text">
-                                          <ul>
-                                             <li class="first">Henry Little</li>
-                                             <li>Feb 07, 2020 </li>
-                                             <li> 07:45 </li>
-                                          </ul>
-                                          <h6>The idea that beautiful and functional everyday objects should not only be affordable to the wealthy</h6>
-                                          <span>Reply</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="comment_content_outer">
-                                    <!----comment-----two--------------->
-                                    <div class="comment_content_inner">
-                                       <div class="image">
-                                          <img src="assets/image/resources/review-1.png" class="img-fluid" alt="img" />
-                                       </div>
-                                       <div class="content_text">
-                                          <ul>
-                                             <li class="first">Henry Little</li>
-                                             <li>Mar 07, 2020 </li>
-                                             <li> 07:45 </li>
-                                          </ul>
-                                          <h6>The idea that beautiful and functional everyday objects should not only be affordable to the wealthy</h6>
-                                          <span>Reply</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="comment_reply">
-                                 <h2 class="text-center">Leave a reply</h2>
-                                 <div class="form_inner">
-                                    <form>
-                                       <div class="row">
-                                          <div class="col-lg-6">
-                                             <div class="form-group ">
-                                                <label>First Name*</label>
-                                                <input type="text" name="name" placeholder="Name" value="" />
+                                 <div class="col-sm-4">
+                                    <!-- Modal Add Form -->
+                                    <div class="modal fade" id="addmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                          </div>
+                                          <form id="addform">
+                                          <div class="modal-body">
+                                             {{ csrf_field() }}
+                                             <div class="form-group">
+                                                <label for="nik">NIK</label>
+                                                <input type="number" class="form-control" name="nik" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="nama">Nama Lengkap</label>
+                                                <input type="text" class="form-control" name="nama" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="jenkel">Jenis Kelamin</label>
+                                                <div class="radio-inline">
+                                                   <label><input type="radio" name="jenkel" value="Laki-laki"> Laki-laki</label>
+                                                   </div>
+                                                   <div class="radio-inline">
+                                                <label><input type="radio" name="jenkel" value="Perempuan"> Perempuan</label>
+                                                </div>
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="umur">Umur</label>
+                                                <input type="text" class="form-control" name="umur" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="provinsi">Provinsi</label>
+                                                <input type="text" class="form-control" name="provinsi" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="kota">Kota/Kabupaten</label>
+                                                <input type="text" class="form-control" name="kota" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alamat">Alamat</label>
+                                                <input type="text" class="form-control" name="alamat"  />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="id_data">Status</label> 
+                                                <select name="id_data" class="form-control">
+                                                   <option value="">- Pilih Status -</option>
+                                                   <option value="1" >ODP</option>
+                                                   <option value="2" >PDP</option>
+                                                   <option value="3" >Positif</option>
+                                                   <option value="4" >Sembuh</option>
+                                                   <option value="5" >Meninggal</option>
+                                                </select>
                                              </div>
                                           </div>
-                                          <div class=" col-lg-6">
-                                             <div class="form-group ">
-                                                <label>Email Adress*  </label>
-                                                <input type="text" name="email" placeholder="Email" value="" />
-                                             </div>
-                                          </div>
-                                          <div class=" col-lg-12">
-                                             <div class="form-group ">
-                                                <label>Website  </label>
-                                                <input type="text" name="email" placeholder="Email" value="" />
-                                             </div>
-                                          </div>
-                                          <div class=" col-lg-12">
-                                             <div class="form-group texta">
-                                                <label>Your Comment</label>
-                                                <textarea name="message" placeholder="message" rows="6"> </textarea>
-                                             </div>
+                                          
+                                          <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                                          <button type="submit" class="btn btn-primary">Simpan</button>
                                           </div>
                                        </div>
-                                       <div class="row comment_reply-btn ">
-                                          <div class=" col-lg-12">
-                                             <button type="submit" class="theme_btn tp_one">Submit Review</button>
+                                       </form>
+                                    </div>
+                                    </div>
+                                    <!-- End Add Form -->
+
+                                    <!-- Modal Edit Form -->
+                                    <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                          </div>
+                                          <form id="editform">
+                                          <div class="modal-body">
+                                             {{ csrf_field() }}
+                                             {{ method_field('PUT') }}
+
+                                             <input type="hidden" name="id" id="id">
+                                             <div class="form-group">
+                                                <label for="nik">NIK</label>
+                                                <input type="number" class="form-control" name="nik" id="nik" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="nama">Nama Lengkap</label>
+                                                <input type="text" class="form-control" name="nama" id="nama" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="jenkel">Jenis Kelamin</label>
+                                                <div class="radio-inline" id="jenkel">
+                                                   <label><input type="radio" name="jenkel" value="Laki-laki"></label>
+                                                   </div>
+                                                   <div class="radio-inline" id="jenkel">
+                                                <label><input type="radio" name="jenkel" value="Perempuan"> Perempuan</label>
+                                                </div>
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="umur">Umur</label>
+                                                <input type="text" class="form-control" name="umur" id="umur" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="provinsi">Provinsi</label>
+                                                <input type="text" class="form-control" name="provinsi" id="provinsi" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="kota">Kota/Kabupaten</label>
+                                                <input type="text" class="form-control" name="kota" id="kota" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alamat">Alamat</label>
+                                                <input type="text" class="form-control" name="alamat" id="alamat" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="id_data">Status</label> 
+                                                <select name="id_data" id="id_data" class="form-control">
+                                                   <option value="">- Pilih Status -</option>
+                                                   <option value="1" >ODP</option>
+                                                   <option value="2" >PDP</option>
+                                                   <option value="3" >Positif</option>
+                                                   <option value="4" >Sembuh</option>
+                                                   <option value="5" >Meninggal</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                                          <button type="submit" class="btn btn-primary">Simpan</button>
                                           </div>
                                        </div>
-                                    </form>
+                                       </form>
+                                    </div>
+                                    </div>
+                                    <!-- End Edit Form -->
+                                 
+
+                                 <button type="button" class="btn btn-info add-new" data-toggle="modal" data-target="#addmodal"><i class="fa fa-plus"></i> Add New</button>
+                                    </div>
+
+                                 <!--<div class="col-sm-8" style="float: right;">
+                                    <div class="search-box">
+                                       <div class="input-group">
+                                          <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                                          <input type="text" class="form-control" placeholder="Search&hellip;">
+                                       </div>
+                                    </div>
+                                 </div>-->
                                  </div>
                               </div>
                            </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <section class="blog type_two bg_white blog_details">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-lg-12">
-                        <div class="heading icon_dark text-center  tp_one">
-                           <h6>Blog</h6>
-                           <h1>Related News </h1>
-                           <span class="flaticon-virus icon"></span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-lg-12 padding_zero">
-                        <div class=" owl-carousel four_items ">
-                           <div class="blog_box type_one ">
-                              <div class="image_box ">
-                                 <img src="assets/image/resources/blog-1.jpg " class="img-fluid " alt="img " />
-                                 <div class="overlay">
-                                    <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s " data-fancybox="gallery" data-caption="  ">
-                                    <span class="flaticon-video-camera "></span>
-                                    </a>
-                                 </div>
-                              </div>
-                              <div class="content_box ">
-                                 <div class="upper_box ">
-                                    <ul>
-                                       <li><a href="# " class="category ">Viruses</a></li>
-                                       <li><a href="# " class="date "><span class="fa fa-clock"></span>26 Apr 2020</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="lower_box ">
-                                    <h2><a href="# ">How we can tak care of our health against Virus </a></h2>
-                                    <a href="# " class="read_more tp_one ">Read More<span class="flaticon-next "></span></a>
-                                 </div>
-                              </div>
+                           <div class="table-responsive">
+                             <table  class="table table-striped table-bordered" id="t-meninggal" >
+                             <thead>
+                                 <tr align="center">
+                                    <th>No</th>
+                                    <th>Nik</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Umur</th>
+                                    <th>Provinsi</th>
+                                    <th>Kota</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                 </tr>
+                               </thead>
+                                 </table>
+                               </div>
+                             </div>
+                             </div>
+                             </div>
                            </div>
-                           <div class="blog_box type_one ">
-                              <div class="image_box ">
-                                 <img src="assets/image/resources/blog-2.jpg " class="img-fluid " alt="img " />
-                                 <div class="overlay">
-                                    <a href="assets/image/resources/blog-3.jpg " data-fancybox="gallery" data-caption="  ">
-                                    <span class="flaticon-image zoom_icon "></span>
-                                    </a>
-                                 </div>
-                              </div>
-                              <div class="content_box ">
-                                 <div class="upper_box clearfix ">
-                                    <ul>
-                                       <li><a href="# " class="category ">Viruses</a></li>
-                                       <li><a href="# " class="date "><span class="fa fa-clock"></span>26 Apr 2020</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="lower_box ">
-                                    <h2><a href="# ">How we can tak care of our health against Virus </a></h2>
-                                    <a href="# " class="read_more tp_one ">Read More<span class="flaticon-next "></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="blog_box type_one ">
-                              <div class="image_box ">
-                                 <img src="assets/image/resources/blog-4.jpg " class="img-fluid " alt="img " />
-                                 <div class="overlay">
-                                    <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s " data-fancybox="gallery" data-caption="  ">
-                                    <span class="flaticon-video-camera "></span>
-                                    </a>
-                                 </div>
-                              </div>
-                              <div class="content_box ">
-                                 <div class="upper_box ">
-                                    <ul>
-                                       <li><a href="# " class="category ">Viruses</a></li>
-                                       <li><a href="# " class="date "><span class="fa fa-clock"></span>26 Apr 2020</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="lower_box ">
-                                    <h2><a href="# ">How we can tak care of our health against Virus </a></h2>
-                                    <a href="# " class="read_more tp_one ">Read More<span class="flaticon-next "></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="blog_box type_one ">
-                              <div class="image_box ">
-                                 <img src="assets/image/resources/blog-3.jpg " class="img-fluid " alt="img " />
-                                 <div class="overlay">
-                                    <a href="assets/image/resources/blog-3.jpg " data-fancybox="gallery" data-caption="  ">
-                                    <span class="flaticon-image zoom_icon "></span>
-                                    </a>
-                                 </div>
-                              </div>
-                              <div class="content_box ">
-                                 <div class="upper_box ">
-                                    <ul>
-                                       <li><a href="# " class="category ">Viruses</a></li>
-                                       <li><a href="# " class="date "><span class="fa fa-clock"></span>26 Apr 2020</a></li>
-                                    </ul>
-                                 </div>
-                                 <div class="lower_box ">
-                                    <h2><a href="# ">How we can tak care of our health against Virus </a></h2>
-                                    <a href="# " class="read_more tp_one ">Read More<span class="flaticon-next "></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+                                 
+            
             <section class="footer type_two ">
                <div class="footer_layer" style="background-image: url(assets/image/resources/footer-bg1.png);"></div>
                <div class="container ">
@@ -653,5 +558,122 @@
       <script src="assets/js/jquery.flexslider-min.js"></script>
       <script src="assets/js/pagenav.js"></script>
       <script src="assets/js/custom.js "></script>
+      <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function() {
+             $('#t-meninggal').DataTable({   
+               processing: true,
+               serverSide: true,
+
+
+               ajax : {
+                  url: '{{ route("meninggal.json") }}'
+               },
+               columns: [
+                  { data: null, sortable: false, 
+                     render: function (data, type, row, meta) {
+                       return meta.row + meta.settings._iDisplayStart + 1;
+                      } 
+                  },
+                  { data: 'nik', name: 'nik' },
+                  { data: 'nama', name: 'nama' },
+                  { data: 'jenkel', name: 'jenkel' },
+                  { data: 'umur', name: 'umur' },
+                  { data: 'provinsi', name: 'provinsi' },
+                  { data: 'kota', name: 'kota' },
+                  { data: 'alamat', name: 'alamat' },
+                  { data: 'action', orderable:false, searchable:false } 
+               ]
+             });
+         });
+
+
+         //AddForm
+         $(document).ready(function() {
+            
+            $('#addform').on('submit', function(e) {
+               e.preventDefault();
+
+               $.ajax({
+                  type: "POST",
+                  url: "/meninggal",
+                  data: $('#addform').serialize(),
+                  success: function(response) {
+                     console.log(response)
+                     $('#addmodal').modal('hide')
+                     alert("Data berhasil disimpan");
+                     location.reload();
+                  },
+                  error: function(error) {
+                     alert("Data tidak tersimpan");
+                  }
+               });
+            });
+         });
+
+         //EditForm
+        $(document).ready(function(){
+
+            $('.edit').on('click', function(){
+               $('#editmodal').modal('show');
+
+               $tr = $(this).closest('tr');
+
+               var data = $tr.children("td").map(function(){
+                  return $(this).text();
+               }).get();
+
+               console.log(data);
+               $('#id').val(data[0]);
+               $('#nik').val(data[1]);
+               $('#nama').val(data[2]);
+               $('#jenkel').val(data[3]);
+               $('#umur').val(data[4]);
+               $('#provinsi').val(data[5]);
+               $('#kota').val(data[6]);
+               $('#alamat').val(data[7]);
+               $('#id_data').val(data[8]);
+            });
+
+         $('#editform').on('submit', function(e){
+            e.preventDefault();
+
+            var id = $('#id').val();
+
+            $.ajax({
+               type: "PUT",
+               url: "/meninggal/"+id,
+               data: $('#editform').serialize(),
+               success: function(response){
+                  console.log(response);
+                  $('#editmodal').modal('hide');
+                  alert("Data berhasil diubah");
+                  location.reload();
+               },
+               error: function(error){
+                  console.log(error);
+               }
+            });
+         });
+      });
+
+         //Hapus Data
+         $(document).on('click', '.delete', function(){
+             if(confirm("Are you sure you want to Delete this data?"))
+             {
+              alert('Record deleted successfully.'); 
+              location.reload();
+             }
+             else
+             {
+                 return false;
+             }
+         });
+
+      </script>
+
    </body>
 </html>

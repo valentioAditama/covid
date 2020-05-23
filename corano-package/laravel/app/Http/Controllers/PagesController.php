@@ -18,10 +18,6 @@ class PagesController extends Controller
         return view('tips');
     }
 
-    public function Crud(){
-        return view('Crud');
-    }
-
     public function DataTerkini(){
         return view('DataTerkini');
     }

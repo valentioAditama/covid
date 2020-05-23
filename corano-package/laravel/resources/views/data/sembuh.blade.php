@@ -14,10 +14,13 @@
       <!-- Responsive -->
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <title>Data Terkini</title>
+      <title>Data Sembuh</title>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" type="text/css" href="assets/fonts/font/flaticon.css">
+      <link rel="stylesheet" type="text/css" href="{{ url('assets/css') }}/font-awesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
       <!---------favicon--------------->
       <link rel="icon" type="image/png" href="assets/image/favicon-32x32.png" sizes="32x32">
       <link rel="icon" type="image/png" href="assets/image/favicon-16x16.png" sizes="16x16">
@@ -35,7 +38,7 @@
                </div>
             </div>
          </div>
-         <!--End Preloader -->
+         <!--End Preloader-->
          <!--Header-->
          <header class="header_v2">
             <section class="header_top">
@@ -114,7 +117,7 @@
                             </li>
                             <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
                             <li class="nav-item nav-item dropdown">
-                              <a class="nav-link link_hd">Data</a>
+                              <a class="nav-link link_hd" href="/crud">Data</a>
                               <ul class="navbar-nav submenu">
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/odp') }}">Data ODP</a></li>
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/pdp') }}">Data PDP</a></li>
@@ -123,7 +126,7 @@
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/meninggal') }}">Data Meninggal</a></li>
                               </ul>
                             </li>
-                            <li class="nav-item nav-item"><a class="nav-link link_hd active" href="/dataTerkini">  Data terkini  </a> </li>
+                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
                             <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
                            </ul>
                          
@@ -135,158 +138,209 @@
          <!--Header-->
          <!------main-content------>
          <main class="main-content">
-            <section class="funfacts type_two">
+            <section class="page_title">
                <div class="container">
-                  <div class="about_fun_facts">
-                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                           <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">434595 </span>+</h2>
-                              <h6>Total Confirmed</h6>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                           <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">170</span>+</h2>
-                              <h6>Countries / Regions</h6>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                           <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">10</span>%</h2>
-                              <h6>Total Recoverd</h6>
-                           </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                           <div class="fun_facts_box type_two last">
-                              <h2><span class="counter-value">80</span>%</h2>
-                              <h6>Confirmed Deaths</h6>
-                           </div>
+                  <div class="row">
+                     <div class="col-lg-12 d-flex">
+                        <div class="content_box">
+                           <ul class="bread_crumb text-center">
+                              <li class="bread_crumb-item"><a href="#">Home</a></li>
+                              <li class="bread_crumb-item active">Data</li>
+                           </ul>
+                           <h1>Data Pasien Sembuh</h1>
                         </div>
                      </div>
                   </div>
                </div>
             </section>
-            <!-----------------breadcrumb------------------------>
-            <section class="blog_grid ">
+            <div class="single_blog_box">
                <div class="container">
                   <div class="row">
-                     <div class="card-deck">
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/iBXt60rKmC4" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/cTw92i-xmi4" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/6D74v9ABSIg" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="card-deck">
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/StVDKWEW6yE" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/IW94L8Wg8ak" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/41HQZZoDr9w" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="card-deck">
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/rExZ7KHtAV8" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/LD6z2fbo2W0" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                        <div class="card">
-                           <div class="embed-responsive embed-responsive-16by9">
-                              <iframe class="embed-responsive-item" src="https://youtube.com/embed/bpVl1kNUBzE" allowfullscreen></iframe>
-                            </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="col-lg-12 text-center pagination_column">
-                        <ul class="pagination">
-                           <li class="disabled"><a href="#"><span class="fa fa-angle-left"></span></a></li>
-                           <li class="active"><a href="#">01 </a></li>
-                           <li><a href="#">02</a></li>
-                           <li><a href="#">03</a></li>
-                           <li><a href="#">04</a></li>
-                           <li><a href="#">05</a></li>
-                           <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </section>
+                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!--------list-of categories-------->
+                        <div class="container">
+                           <div class="table-wrapper">
+                              <div class="row">
+                                 <div class="col-sm-4">
+                                    <!-- Modal Add Form -->
+                                    <div class="modal fade" id="addmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                          </div>
+                                          <form id="addform">
+                                          <div class="modal-body">
+                                             {{ csrf_field() }}
+                                             <div class="form-group">
+                                                <label for="nik">NIK</label>
+                                                <input type="number" class="form-control" name="nik" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="nama">Nama Lengkap</label>
+                                                <input type="text" class="form-control" name="nama" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="jenkel">Jenis Kelamin</label>
+                                                <div class="radio-inline">
+                                                   <label><input type="radio" name="jenkel" value="Laki-laki"> Laki-laki</label>
+                                                   </div>
+                                                   <div class="radio-inline">
+                                                <label><input type="radio" name="jenkel" value="Perempuan"> Perempuan</label>
+                                                </div>
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="umur">Umur</label>
+                                                <input type="text" class="form-control" name="umur" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="provinsi">Provinsi</label>
+                                                <input type="text" class="form-control" name="provinsi" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="kota">Kota/Kabupaten</label>
+                                                <input type="text" class="form-control" name="kota" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alamat">Alamat</label>
+                                                <input type="text" class="form-control" name="alamat"  />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="id_data">Status</label> 
+                                                <select name="id_data" class="form-control">
+                                                   <option value="">- Pilih Status -</option>
+                                                   <option value="1" >ODP</option>
+                                                   <option value="2" >PDP</option>
+                                                   <option value="3" >Positif</option>
+                                                   <option value="4" >Sembuh</option>
+                                                   <option value="5" >Meninggal</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                                          <button type="submit" class="btn btn-primary">Simpan</button>
+                                          </div>
+                                       </div>
+                                       </form>
+                                    </div>
+                                    </div>
+                                    <!-- End Add Form -->
+
+                                    <!-- Modal Edit Form -->
+                                    <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                          </button>
+                                          </div>
+                                          <form id="editform">
+                                          <div class="modal-body">
+                                             {{ csrf_field() }}
+                                             {{ method_field('PUT') }}
+
+                                             <input type="hidden" name="id" id="id">
+                                             <div class="form-group">
+                                                <label for="nik">NIK</label>
+                                                <input type="number" class="form-control" name="nik" id="nik" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="nama">Nama Lengkap</label>
+                                                <input type="text" class="form-control" name="nama" id="nama" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="jenkel">Jenis Kelamin</label>
+                                                <div class="radio-inline" id="jenkel">
+                                                   <label><input type="radio" name="jenkel" value="Laki-laki"></label>
+                                                   </div>
+                                                   <div class="radio-inline" id="jenkel">
+                                                <label><input type="radio" name="jenkel" value="Perempuan"> Perempuan</label>
+                                                </div>
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="umur">Umur</label>
+                                                <input type="text" class="form-control" name="umur" id="umur" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="provinsi">Provinsi</label>
+                                                <input type="text" class="form-control" name="provinsi" id="provinsi" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="kota">Kota/Kabupaten</label>
+                                                <input type="text" class="form-control" name="kota" id="kota" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="alamat">Alamat</label>
+                                                <input type="text" class="form-control" name="alamat" id="alamat" />
+                                             </div>
+                                             <div class="form-group">
+                                                <label for="id_data">Status</label> 
+                                                <select name="id_data" id="id_data" class="form-control">
+                                                   <option value="">- Pilih Status -</option>
+                                                   <option value="1" >ODP</option>
+                                                   <option value="2" >PDP</option>
+                                                   <option value="3" >Positif</option>
+                                                   <option value="4" >Sembuh</option>
+                                                   <option value="5" >Meninggal</option>
+                                                </select>
+                                             </div>
+                                          </div>
+                                          
+                                          <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
+                                          <button type="submit" class="btn btn-primary">Simpan</button>
+                                          </div>
+                                       </div>
+                                       </form>
+                                    </div>
+                                    </div>
+                                    <!-- End Edit Form -->
+                                 
+
+                                 <button type="button" class="btn btn-info add-new" data-toggle="modal" data-target="#addmodal"><i class="fa fa-plus"></i> Add New</button>
+                                    </div>
+
+                                 <!--<div class="col-sm-8" style="float: right;">
+                                    <div class="search-box">
+                                       <div class="input-group">
+                                          <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                                          <input type="text" class="form-control" placeholder="Search&hellip;">
+                                       </div>
+                                    </div>
+                                 </div>-->
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="table-responsive">
+                             <table  class="table table-striped table-bordered" id="t-sembuh" >
+                             <thead>
+                                 <tr align="center">
+                                    <th>No</th>
+                                    <th>Nik</th>
+                                    <th>Nama Lengkap</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Umur</th>
+                                    <th>Provinsi</th>
+                                    <th>Kota</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                 </tr>
+                               </thead>
+                                 </table>
+                               </div>
+                             </div>
+                             </div>
+                             </div>
+                           </div>
+                                 
+            
             <section class="footer type_two ">
                <div class="footer_layer" style="background-image: url(assets/image/resources/footer-bg1.png);"></div>
                <div class="container ">
@@ -504,5 +558,122 @@
       <script src="assets/js/jquery.flexslider-min.js"></script>
       <script src="assets/js/pagenav.js"></script>
       <script src="assets/js/custom.js "></script>
+      <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+   <script type="text/javascript">
+      $(document).ready(function() {
+             $('#t-sembuh').DataTable({   
+               processing: true,
+               serverSide: true,
+
+
+               ajax : {
+                  url: '{{ route("sembuh.json") }}'
+               },
+               columns: [
+                  { data: null, sortable: false, 
+                     render: function (data, type, row, meta) {
+                       return meta.row + meta.settings._iDisplayStart + 1;
+                      } 
+                  },
+                  { data: 'nik', name: 'nik' },
+                  { data: 'nama', name: 'nama' },
+                  { data: 'jenkel', name: 'jenkel' },
+                  { data: 'umur', name: 'umur' },
+                  { data: 'provinsi', name: 'provinsi' },
+                  { data: 'kota', name: 'kota' },
+                  { data: 'alamat', name: 'alamat' },
+                  { data: 'action', orderable:false, searchable:false } 
+               ]
+             });
+         });
+
+
+         //AddForm
+         $(document).ready(function() {
+            
+            $('#addform').on('submit', function(e) {
+               e.preventDefault();
+
+               $.ajax({
+                  type: "POST",
+                  url: "/sembuh",
+                  data: $('#addform').serialize(),
+                  success: function(response) {
+                     console.log(response)
+                     $('#addmodal').modal('hide')
+                     alert("Data berhasil disimpan");
+                     location.reload();
+                  },
+                  error: function(error) {
+                     alert("Data tidak tersimpan");
+                  }
+               });
+            });
+         });
+
+         //EditForm
+        $(document).ready(function(){
+
+            $('.edit').on('click', function(){
+               $('#editmodal').modal('show');
+
+               $tr = $(this).closest('tr');
+
+               var data = $tr.children("td").map(function(){
+                  return $(this).text();
+               }).get();
+
+               console.log(data);
+               $('#id').val(data[0]);
+               $('#nik').val(data[1]);
+               $('#nama').val(data[2]);
+               $('#jenkel').val(data[3]);
+               $('#umur').val(data[4]);
+               $('#provinsi').val(data[5]);
+               $('#kota').val(data[6]);
+               $('#alamat').val(data[7]);
+               $('#id_data').val(data[8]);
+            });
+
+         $('#editform').on('submit', function(e){
+            e.preventDefault();
+
+            var id = $('#id').val();
+
+            $.ajax({
+               type: "PUT",
+               url: "/sembuh/"+id,
+               data: $('#editform').serialize(),
+               success: function(response){
+                  console.log(response);
+                  $('#editmodal').modal('hide');
+                  alert("Data berhasil diubah");
+                  location.reload();
+               },
+               error: function(error){
+                  console.log(error);
+               }
+            });
+         });
+      });
+
+         //Hapus Data
+         $(document).on('click', '.delete', function(){
+             if(confirm("Are you sure you want to Delete this data?"))
+             {
+              alert('Record deleted successfully.'); 
+              location.reload();
+             }
+             else
+             {
+                 return false;
+             }
+         });
+
+      </script>
+
    </body>
 </html>

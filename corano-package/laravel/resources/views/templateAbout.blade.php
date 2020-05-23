@@ -113,7 +113,16 @@
                               <a class="nav-link link_hd" href="/">  Home  </a>
                            </li>
                            <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
-                           <li class="nav-item nav-item"><a class="nav-link link_hd" href="/crud">CRUD</a></li>
+                           <li class="nav-item nav-item dropdown">
+                              <a class="nav-link link_hd">Data</a>
+                              <ul class="navbar-nav submenu">
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/odp') }}">Data ODP</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/pdp') }}">Data PDP</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/positif') }}">Data Positif</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="{{ url('/sembuh') }}">Data Sembuh</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="#]{{ url('/meninggal') }}">Data Meninggal</a></li>
+                              </ul>
+                           </li>
                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
                            <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
                           </ul>
