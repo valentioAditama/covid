@@ -21,5 +21,12 @@ class PagesController extends Controller
     public function DataTerkini(){
         return view('DataTerkini');
     }
-    
+
+    public function login(){
+        return view('login');
+    }
+
+    public function register(){
+        return view('register');
+    }
 }
