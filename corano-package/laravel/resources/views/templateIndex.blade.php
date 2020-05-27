@@ -408,26 +408,26 @@
                      <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">434595 </span>+</h2>
-                              <h6>Total Confirmed</h6>
+                              <h2><span class="counter-value">{{$pdp}} </span>+</h2>
+                              <h6>Total PDP</h6>
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">170</span>+</h2>
-                              <h6>Countries / Regions</h6>
+                              <h2><span class="counter-value">{{$positif}} </span>+</h2>
+                              <h6>Total Positif</h6>
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">10</span>%</h2>
-                              <h6>Total Recoverd</h6>
+                              <h2><span class="counter-value">{{$sembuh}} </span>+</h2>
+                              <h6>Total Sembuh</h6>
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                           <div class="fun_facts_box type_two last">
-                              <h2><span class="counter-value">80</span>%</h2>
-                              <h6>Confirmed Deaths</h6>
+                           <div class="fun_facts_box type_two">
+                              <h2><span class="counter-value">{{$meninggal}} </span>+</h2>
+                              <h6>Total Meninggal</h6>
                            </div>
                         </div>
                      </div>

@@ -15,12 +15,14 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <title>Data Positif</title>
+      <meta name="csrf-token" content="{{ csrf_token() }}">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
       <link rel="stylesheet" type="text/css" href="assets/fonts/font/flaticon.css">
       <link rel="stylesheet" type="text/css" href="{{ url('assets/css') }}/font-awesome.min.css"/>
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" integrity="sha256-pODNVtK3uOhL8FUNWWvFQK0QoQoV3YA9wGGng6mbZ0E=" crossorigin="anonymous" />
       <!---------favicon--------------->
       <link rel="icon" type="image/png" href="assets/image/favicon-32x32.png" sizes="32x32">
       <link rel="icon" type="image/png" href="assets/image/favicon-16x16.png" sizes="16x16">
@@ -162,159 +164,108 @@
                            <div class="table-wrapper">
                               <div class="row">
                                  <div class="col-sm-4">
-                                    <!-- Modal Add Form -->
-                                    <div class="modal fade" id="addmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                             <span aria-hidden="true">&times;</span>
-                                          </button>
-                                          </div>
-                                          <form id="addform">
-                                          <div class="modal-body">
-                                             {{ csrf_field() }}
-                                             <div class="form-group">
-                                                <label for="nik">NIK</label>
-                                                <input type="number" class="form-control" name="nik" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="nama">Nama Lengkap</label>
-                                                <input type="text" class="form-control" name="nama" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="jenkel">Jenis Kelamin</label>
-                                                <div class="radio-inline">
-                                                   <label><input type="radio" name="jenkel" value="Laki-laki"> Laki-laki</label>
-                                                   </div>
-                                                   <div class="radio-inline">
-                                                <label><input type="radio" name="jenkel" value="Perempuan"> Perempuan</label>
+                                    <!-- MULAI MODAL FORM TAMBAH/EDIT-->
+                                    <div class="modal fade" id="tambah-edit-modal" aria-hidden="true">
+                                        <div class="modal-dialog ">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modal-judul"></h5>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 </div>
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="umur">Umur</label>
-                                                <input type="text" class="form-control" name="umur" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="provinsi">Provinsi</label>
-                                                <input type="text" class="form-control" name="provinsi" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="kota">Kota/Kabupaten</label>
-                                                <input type="text" class="form-control" name="kota" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="alamat">Alamat</label>
-                                                <input type="text" class="form-control" name="alamat"  />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="id_data">Status</label> 
-                                                <select name="id_data" class="form-control">
-                                                   <option value="">- Pilih Status -</option>
-                                                   <option value="1" >ODP</option>
-                                                   <option value="2" >PDP</option>
-                                                   <option value="3" >Positif</option>
-                                                   <option value="4" >Sembuh</option>
-                                                   <option value="5" >Meninggal</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                          
-                                          <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-                                          <button type="submit" class="btn btn-primary">Simpan</button>
-                                          </div>
-                                       </div>
-                                       </form>
-                                    </div>
-                                    </div>
-                                    <!-- End Add Form -->
+                                                <div class="modal-body">
+                                                    <form id="form-tambah-edit" name="form-tambah-edit" class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                            <input type="hidden" name="id" id="id">
+                                                             <div class="form-group">
+                                                                <label for="nik">NIK</label>
+                                                                <input type="number" class="form-control" name="nik" id="nik" />
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="nama">Nama Lengkap</label>
+                                                                <input type="text" class="form-control" name="nama" id="nama" />
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="jenkel">Jenis Kelamin</label>
+                                                                <div class="radio-inline">
+                                                                   <label><input type="radio" name="jenkel" value="Laki-laki" id="jenkelL"> Laki-laki</label>
+                                                                   </div>
+                                                                   <div class="radio-inline">
+                                                                <label><input type="radio" name="jenkel" value="Perempuan" id="jenkelP"> Perempuan</label>
+                                                                </div>
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="umur">Umur</label>
+                                                                <input type="text" class="form-control" name="umur" id="umur" />
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="provinsi">Provinsi</label>
+                                                                <input type="text" class="form-control" name="provinsi" id="provinsi" />
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="kota">Kota/Kabupaten</label>
+                                                                <input type="text" class="form-control" name="kota" id="kota" />
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="alamat">Alamat</label>
+                                                                <input type="text" class="form-control" name="alamat" id="alamat" />
+                                                             </div>
+                                                             <div class="form-group">
+                                                                <label for="id_data">Status</label> 
+                                                                <select name="id_data" id="id_data" class="form-control">
+                                                                   <option value="">- Pilih Status -</option>
+                                                                   <option value="1" >ODP</option>
+                                                                   <option value="2" >PDP</option>
+                                                                   <option value="3" >Positif</option>
+                                                                   <option value="4" >Sembuh</option>
+                                                                   <option value="5" >Meninggal</option>
+                                                                </select>
+                                                             </div>
 
-                                    <!-- Modal Edit Form -->
-                                    <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLabel">Edit Data</h5>
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                             <span aria-hidden="true">&times;</span>
-                                          </button>
-                                          </div>
-                                          <form id="editform">
-                                          <div class="modal-body">
-                                             {{ csrf_field() }}
-                                             {{ method_field('PUT') }}
+                                                            </div>
 
-                                             <input type="hidden" name="id" id="id">
-                                             <div class="form-group">
-                                                <label for="nik">NIK</label>
-                                                <input type="number" class="form-control" name="nik" id="nik" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="nama">Nama Lengkap</label>
-                                                <input type="text" class="form-control" name="nama" id="nama" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="jenkel">Jenis Kelamin</label>
-                                                <div class="radio-inline" id="jenkel">
-                                                   <label><input type="radio" name="jenkel" value="Laki-laki"></label>
-                                                   </div>
-                                                   <div class="radio-inline" id="jenkel">
-                                                <label><input type="radio" name="jenkel" value="Perempuan"> Perempuan</label>
+                                                            <div class="col-sm-offset-2 col-sm-12">
+                                                                <button type="submit" class="btn btn-primary btn-block" id="tombol-simpan"
+                                                                    value="create">Simpan
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
                                                 </div>
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="umur">Umur</label>
-                                                <input type="text" class="form-control" name="umur" id="umur" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="provinsi">Provinsi</label>
-                                                <input type="text" class="form-control" name="provinsi" id="provinsi" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="kota">Kota/Kabupaten</label>
-                                                <input type="text" class="form-control" name="kota" id="kota" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="alamat">Alamat</label>
-                                                <input type="text" class="form-control" name="alamat" id="alamat" />
-                                             </div>
-                                             <div class="form-group">
-                                                <label for="id_data">Status</label> 
-                                                <select name="id_data" id="id_data" class="form-control">
-                                                   <option value="">- Pilih Status -</option>
-                                                   <option value="1" >ODP</option>
-                                                   <option value="2" >PDP</option>
-                                                   <option value="3" >Positif</option>
-                                                   <option value="4" >Sembuh</option>
-                                                   <option value="5" >Meninggal</option>
-                                                </select>
-                                             </div>
-                                          </div>
-                                          
-                                          <div class="modal-footer">
-                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kembali</button>
-                                          <button type="submit" class="btn btn-primary">Simpan</button>
-                                          </div>
-                                       </div>
-                                       </form>
+                                                <div class="modal-footer">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    </div>
-                                    <!-- End Edit Form -->
-                                 
+                                    <!-- AKHIR MODAL -->
 
-                                 <button type="button" class="btn btn-info add-new" data-toggle="modal" data-target="#addmodal"><i class="fa fa-plus"></i> Add New</button>
+                                    <!-- MULAI MODAL KONFIRMASI DELETE-->
+
+                                    <div class="modal fade" tabindex="-1" role="dialog" id="konfirmasi-modal" data-backdrop="false">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Hapus Data</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Are you sure you want to Delete this data?</p>
+                                                </div>
+                                                <div class="modal-footer bg-whitesmoke br">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-danger" name="tombol-hapus" id="tombol-hapus">Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                 <!--<div class="col-sm-8" style="float: right;">
-                                    <div class="search-box">
-                                       <div class="input-group">
-                                          <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-                                          <input type="text" class="form-control" placeholder="Search&hellip;">
-                                       </div>
+                                    <!-- AKHIR MODAL -->
+               
+                                 <a href="javascript:void(0)" class="btn btn-info add-new" id="create-new"><i class="fa fa-plus"></i> Add New</a>
                                     </div>
-                                 </div>-->
                                  </div>
                               </div>
                            </div>
@@ -542,12 +493,13 @@
       </div>
       <!-- /.search-popup -->
       <!-----------------------------------script-------------------------------------->
+      <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
       <script src="assets/js/jquery.js "></script>
       <script src="assets/js/popper.min.js "></script>
       <script src="assets/js/bootstrap.min.js "></script>
       <script src="assets/js/bsnav.min.js "></script>
       <script src="assets/js/jquery-ui.js "></script>
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
       <script src="assets/js/wow.js "></script>
       <script src="assets/js/owl.js "></script>
       <script src="assets/js/odometer.min.js "></script>
@@ -557,20 +509,38 @@
       <script src="assets/js/moment.js "></script>
       <script src="assets/js/jquery.flexslider-min.js"></script>
       <script src="assets/js/pagenav.js"></script>
-      <script src="assets/js/custom.js "></script>
-      <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="assets/js/custom.js "></script>       
       <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
       <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.js" integrity="sha256-siqh9650JHbYFKyZeTEAhq+3jvkFCG8Iz+MHdr9eKrw=" crossorigin="anonymous"></script>
 
    <script type="text/javascript">
+      $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+        });
+
+      //TOMBOL TAMBAH DATA
+        //jika tombol-tambah diklik maka
+        $('#create-new').click(function () {
+            $('#button-simpan').val("create-post"); //valuenya menjadi create-post
+            $('#id').val(''); //valuenya menjadi kosong
+            $('#form-tambah-edit').trigger("reset"); //mereset semua input dll didalamnya
+            $('#modal-judul').html("Tambah Data"); //valuenya tambah pegawai baru
+            $('#tambah-edit-modal').modal('show'); //modal tampil
+        });
+
       $(document).ready(function() {
              $('#t-positif').DataTable({   
                processing: true,
                serverSide: true,
-
-
                ajax : {
-                  url: '{{ route("positif.json") }}'
+                  url: "{{ route('positif.index') }}",
+                  type: 'GET'
                },
                columns: [
                   { data: null, sortable: false, 
@@ -590,88 +560,95 @@
              });
          });
 
+         //SIMPAN & UPDATE DATA DAN VALIDASI (SISI CLIENT)
+        //jika id = form-tambah-edit panjangnya lebih dari 0 atau bisa dibilang terdapat data dalam form tersebut maka
+        //jalankan jquery validator terhadap setiap inputan dll dan eksekusi script ajax untuk simpan data
+        if ($("#form-tambah-edit").length > 0) {
+            $("#form-tambah-edit").validate({
+                submitHandler: function (form) {
+                    var actionType = $('#tombol-simpan').val();
+                    $('#tombol-simpan').html('Sending..');
 
-         //AddForm
-         $(document).ready(function() {
-            
-            $('#addform').on('submit', function(e) {
-               e.preventDefault();
+                    $.ajax({
+                        data: $('#form-tambah-edit')
+                            .serialize(), //function yang dipakai agar value pada form-control seperti input, textarea, select dll dapat digunakan pada URL query string ketika melakukan ajax request
+                        url: "{{ route('positif.store') }}", //url simpan data
+                        type: "POST", //karena simpan kita pakai method POST
+                        dataType: 'json', //data tipe kita kirim berupa JSON
+                        success: function (data) { //jika berhasil 
+                            $('#form-tambah-edit').trigger("reset"); //form reset
+                            $('#tambah-edit-modal').modal('hide'); //modal hide
+                            $('#tombol-simpan').html('Simpan'); //tombol simpan
+                            var oTable = $('#t-positif').dataTable(); //inialisasi datatable
+                            oTable.fnDraw(false); //reset datatable
+                            iziToast.success({ //tampilkan iziToast dengan notif data berhasil disimpan pada posisi kanan bawah
+                                title: 'Data Berhasil Disimpan',
+                                message: '{{ Session('
+                                success ')}}',
+                                position: 'bottomRight'
+                            });
+                        },
+                        error: function (data) { //jika error tampilkan error pada console
+                            console.log('Error:', data);
+                            $('#tombol-simpan').html('Simpan');
+                        }
+                    });
+                }
+            })
+        }
 
-               $.ajax({
-                  type: "POST",
-                  url: "/positif",
-                  data: $('#addform').serialize(),
-                  success: function(response) {
-                     console.log(response)
-                     $('#addmodal').modal('hide')
-                     alert("Data berhasil disimpan");
-                     location.reload();
-                  },
-                  error: function(error) {
-                     alert("Data tidak tersimpan");
-                  }
-               });
-            });
-         });
+        //TOMBOL EDIT DATA PER PEGAWAI DAN TAMPIKAN DATA BERDASARKAN ID PEGAWAI KE MODAL
+        //ketika class edit-post yang ada pada tag body di klik maka
+        $('body').on('click', '.edit', function () {
+            var id = $(this).data('id');
+            $.get('positif/' + id + '/edit', function (data) {
+                $('#modal-judul').html("Edit Data");
+                $('#tombol-simpan').val("edit");
+                $('#tambah-edit-modal').modal('show');
 
-         //EditForm
-        $(document).ready(function(){
+                //set value masing-masing id berdasarkan data yg diperoleh dari ajax get request diatas               
+                $('#id').val(data.id);
+                $('#nik').val(data.nik);
+                $('#nama').val(data.nama);
+                $('input:radio[name=jenkel][value='+data.jenkel+']')[0].checked = true;
+                $('#umur').val(data.umur);
+                $('#provinsi').val(data.provinsi);
+                $('#kota').val(data.kota);
+                $('#alamat').val(data.alamat);
+                $('#id_data').val(data.id_data);
+            })
+        });
 
-            $('.edit').on('click', function(){
-               $('#editmodal').modal('show');
+         //jika klik class delete (yang ada pada tombol delete) maka tampilkan modal konfirmasi hapus maka
+        $(document).on('click', '.delete', function () {
+            id = $(this).attr('id');
+            $('#konfirmasi-modal').modal('show');
+        });
 
-               $tr = $(this).closest('tr');
-
-               var data = $tr.children("td").map(function(){
-                  return $(this).text();
-               }).get();
-
-               console.log(data);
-               $('#id').val(data[0]);
-               $('#nik').val(data[1]);
-               $('#nama').val(data[2]);
-               $('#jenkel').val(data[3]);
-               $('#umur').val(data[4]);
-               $('#provinsi').val(data[5]);
-               $('#kota').val(data[6]);
-               $('#alamat').val(data[7]);
-               $('#id_data').val(data[8]);
-            });
-
-         $('#editform').on('submit', function(e){
-            e.preventDefault();
-
-            var id = $('#id').val();
-
+        //jika tombol hapus pada modal konfirmasi di klik maka
+        $('#tombol-hapus').click(function () {
             $.ajax({
-               type: "PUT",
-               url: "/positif/"+id,
-               data: $('#editform').serialize(),
-               success: function(response){
-                  console.log(response);
-                  $('#editmodal').modal('hide');
-                  alert("Data berhasil diubah");
-                  location.reload();
-               },
-               error: function(error){
-                  console.log(error);
-               }
-            });
-         });
-      });
 
-         //Hapus Data
-         $(document).on('click', '.delete', function(){
-             if(confirm("Are you sure you want to Delete this data?"))
-             {
-              alert('Record deleted successfully.'); 
-              location.reload();
-             }
-             else
-             {
-                 return false;
-             }
-         });
+                url: "positif/" + id, //eksekusi ajax ke url ini
+                type: 'delete',
+                beforeSend: function () {
+                    $('#tombol-hapus').text('Hapus Data'); //set text untuk tombol hapus
+                },
+                success: function (data) { //jika sukses
+                    setTimeout(function () {
+                        $('#konfirmasi-modal').modal('hide'); //sembunyikan konfirmasi modal
+                        var oTable = $('#t-positif').dataTable();
+                        oTable.fnDraw(false); //reset datatable
+                    });
+                    iziToast.warning({ //tampilkan izitoast warning
+                        title: 'Data Berhasil Dihapus',
+                        message: '{{ Session('
+                        delete ')}}',
+                        position: 'bottomRight'
+                    });
+                }
+            })
+        });
 
       </script>
 

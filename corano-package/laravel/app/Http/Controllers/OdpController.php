@@ -7,6 +7,7 @@ use DataTables;
 use Carbon\Carbon;
 use App\DataKasus;
 use Illuminate\Support\Facades\Cache;
+use Redirect, Response;
 
 class OdpController extends Controller
 {
@@ -15,28 +16,24 @@ class OdpController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $data = DataKasus::where('id_data', 1)->get();
+        if ($request->ajax()) {
+            return Datatables::of($data)
+            ->addColumn('action', function($row){ 
+              $btn = '<a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$row->id.'" data-original-title="Edit" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>'; 
+              $btn = $btn.'  <a href="javascript:void(0)" data-toggle="tooltip" id="'.$row->id.'" data-original-title="Delete" class="delete"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>'; 
+              return $btn; 
+         })
+            ->rawColumns(['action'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+
         return view('data.odp');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function json(Request $request)
-    {
-        $data = DataKasus::where('id_data', 1)->get();
-            return Datatables::of($data)
-            ->addColumn('action', function($data){
-            return '<a href="edit/'.$data->id.'" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                    <a href="delete/'.$data->id.'" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>';
-
-         })
-            ->make(true);
-
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -46,31 +43,18 @@ class OdpController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new DataKasus;
-
-        $data->nik = $request->input('nik');
-        $data->nama = $request->input('nama');
-        $data->jenkel = $request->input('jenkel');
-        $data->umur = $request->input('umur');
-        $data->provinsi = $request->input('provinsi');
-        $data->kota = $request->input('kota');
-        $data->alamat = $request->input('alamat');
-        $data->id_data = $request->input('id_data');
-
-        $data->save();
-
-        //return redirect('/odp')->with('success', 'Data Berhasil Ditambahkan');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        $id = $request->id;
+        $data = DataKasus::updateOrCreate(['id' => $id],
+                   ['nik' => $request->nik, 
+                    'nama' => $request->nama,
+                    'jenkel' => $request->jenkel,
+                    'umur' => $request->umur,
+                    'provinsi' => $request->provinsi,
+                    'kota' => $request->kota,
+                    'alamat' => $request->alamat,
+                    'id_data' => $request->id_data
+                    ]);        
+        return Response::json($data);
     }
 
     /**
@@ -81,30 +65,10 @@ class OdpController extends Controller
      */
     public function edit($id)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $data = DataKasus::find($id);
-
-        $data->nik = $request->input('nik');
-        $data->nama = $request->input('nama');
-        $data->jenkel = $request->input('jenkel');
-        $data->umur = $request->input('umur');
-        $data->provinsi = $request->input('provinsi');
-        $data->kota = $request->input('kota');
-        $data->alamat = $request->input('alamat');
-        $data->id_data = $request->input('id_data');
-
-        $data->save();
+        $where = array('id' => $id);
+        $data  = DataKasus::where($where)->first();
+     
+        return Response::json($data);
     }
 
     /**
