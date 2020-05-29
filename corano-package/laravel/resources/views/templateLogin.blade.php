@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="assets/login/css/iofrm-style.css">
     <link rel="stylesheet" type="text/css" href="assets/login/css/iofrm-theme5.css">
 </head>
-<body>
+<body >
     <div class="form-body">
-        <div class="website-logo">
+        <div class="website-logo ">
             <a href="index.html">
                 <div class="logo">
                     <img class="logo-size" src="assets/login/images/logo-light.svg" alt="">
