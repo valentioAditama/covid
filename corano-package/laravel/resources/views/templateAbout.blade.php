@@ -105,12 +105,12 @@
             <section class="navbar_outer">
                <div class="navbar navbar-expand-lg  bsnav bsnav-sticky bsnav-sticky-slide">
                   <div class="container">
-                     <a class="navbar-brand" href="/"><img src="assets/image/home-1-logo.png" class="img-fluid" alt="img"></a>
+                     <a class="navbar-brand" href="/home"><img src="assets/image/home-1-logo.png" class="img-fluid" alt="img"></a>
                      <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
                      <div class="collapse navbar-collapse scroll-nav">
                         <ul class="navbar-nav navbar-mobile navbar_left  ml-auto" id="nav">
                            <li class="nav-item nav-item">
-                              <a class="nav-link link_hd" href="/">  Home  </a>
+                              <a class="nav-link link_hd" href="/home">  Home  </a>
                            </li>
                            <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
                            <li class="nav-item nav-item dropdown">
@@ -124,9 +124,10 @@
                               </ul>
                            </li>
                            <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
-                           <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
+                           <li class="nav-item nav-item"><a href="/tips" class="nav-link link_hd"> Tips & Trick</a></li>
                           </ul>
-                        
+                          @extends('layouts.app')
+                          @section('content')
                      </div>
                   </div>
                </div>
@@ -532,3 +533,4 @@
       <script src="assets/js/custom.js "></script>
    </body>
 </html>
+@endsection

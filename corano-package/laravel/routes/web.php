@@ -12,12 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'PagesController@login');
-Route::get('/register', 'PagesController@register');
-Route::get('/index', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/tips', 'PagesController@tips');
-Route::get('/dataTerkini', 'PagesController@DataTerkini' );
+Route::get('/', 'HomeController@login');
+Route::get('/index', 'HomeController@index');
+Route::get('/about', 'HomeController@about');
+Route::get('/tips', 'HomeController@tips');
+Route::get('/dataTerkini', 'HomeController@DataTerkini' );
 
 //odp
 Route::resource('/odp','OdpController')->except(['show','update']);
@@ -34,3 +33,6 @@ Route::resource('/sembuh','SembuhController')->except(['show','update']);
 
 //meninggal
 Route::resource('/meninggal','MeninggalController')->except(['show','update']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('index');

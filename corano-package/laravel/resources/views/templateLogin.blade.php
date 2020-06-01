@@ -31,9 +31,26 @@
                         <div class="page-links">
                             <a href="/login" class="active">Login</a><a href="/register">Register</a>
                         </div>
-                        <form>
-                            <input class="form-control" type="text" name="username" placeholder="E-mail Address" required>
-                            <input class="form-control" type="password" name="password" placeholder="Password" required>
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
+
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+
+
                             <div class="form-button">
                                <button id="submit" type="submit" class="btn" style="background-color: #FF1493;"><a href="/index">Login</a></button> <a href="forget5.html">Forget password?</a>
                             </div>

@@ -36,8 +36,8 @@
             </div>
          </div>
          <!--End Preloader -->
-         <!--Header-->
-         <header class="header_v2">
+           <!--Header-->
+           <header class="header_v2">
             <section class="header_top">
                <div class="container">
                   <div class="row">
@@ -103,34 +103,35 @@
                </div>
             </section>
             <section class="navbar_outer">
-                <div class="navbar navbar-expand-lg  bsnav bsnav-sticky bsnav-sticky-slide">
-                   <div class="container">
-                      <a class="navbar-brand" href="/"><img src="assets/image/home-1-logo.png" class="img-fluid" alt="img"></a>
-                      <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
-                      <div class="collapse navbar-collapse scroll-nav">
-                         <ul class="navbar-nav navbar-mobile navbar_left  ml-auto" id="nav">
-                            <li class="nav-item nav-item">
-                               <a class="nav-link link_hd" href="/">  Home  </a>
-                            </li>
-                            <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
-                            <li class="nav-item nav-item dropdown">
+               <div class="navbar navbar-expand-lg  bsnav bsnav-sticky bsnav-sticky-slide">
+                  <div class="container">
+                     <a class="navbar-brand" href="/home"><img src="assets/image/home-1-logo.png" class="img-fluid" alt="img"></a>
+                     <button class="navbar-toggler toggler-spring"><span class="navbar-toggler-icon"></span></button>
+                     <div class="collapse navbar-collapse scroll-nav">
+                        <ul class="navbar-nav navbar-mobile navbar_left  ml-auto" id="nav">
+                           <li class="nav-item nav-item">
+                              <a class="nav-link link_hd" href="/home">  Home  </a>
+                           </li>
+                           <li class="nav-item nav_item"><a class="nav-link link_hd" href="/about">About </a></li>
+                           <li class="nav-item nav-item dropdown">
                               <a class="nav-link link_hd">Data</a>
                               <ul class="navbar-nav submenu">
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/odp') }}">Data ODP</a></li>
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/pdp') }}">Data PDP</a></li>
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/positif') }}">Data Positif</a></li>
                                  <li class="nav-item"><a class="nav-link" href="{{ url('/sembuh') }}">Data Sembuh</a></li>
-                                 <li class="nav-item"><a class="nav-link" href="{{ url('/meninggal') }}">Data Meninggal</a></li>
+                                 <li class="nav-item"><a class="nav-link" href="#]{{ url('/meninggal') }}">Data Meninggal</a></li>
                               </ul>
-                            </li>
-                            <li class="nav-item nav-item"><a class="nav-link link_hd active" href="/dataTerkini">  Data terkini  </a> </li>
-                            <li class="nav-item nav-item"><a href="#" class="nav-link link_hd"> Tips & Trick</a></li>
-                           </ul>
-                         
-                      </div>
-                   </div>
-                </div>
-             </section>
+                           </li>
+                           <li class="nav-item nav-item"><a class="nav-link link_hd" href="/dataTerkini">  Data terkini  </a> </li>
+                           <li class="nav-item nav-item"><a href="/tips" class="nav-link link_hd"> Tips & Trick</a></li>
+                          </ul>
+                          @extends('layouts.app')
+                          @section('content')
+                     </div>
+                  </div>
+               </div>
+            </section>
          </header>
          <!--Header-->
          <!------main-content------>
@@ -139,30 +140,34 @@
                <div class="container">
                   <div class="about_fun_facts">
                      <div class="row">
+                         @foreach ($data as $datas)
+
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">434595 </span>+</h2>
-                              <h6>Total Confirmed</h6>
+                              <h2>{{$datas['name']}}</h2>
+                              <h6>Negara </h6>
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">170</span>+</h2>
-                              <h6>Countries / Regions</h6>
+                              <h2>{{$datas['positif']}}</h2>
+                              <h6>Positif</h6>
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two">
-                              <h2><span class="counter-value">10</span>%</h2>
-                              <h6>Total Recoverd</h6>
+                              <h2>{{ $datas['sembuh']}}</h2>
+                              <h6>sembuh</h6>
                            </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                            <div class="fun_facts_box type_two last">
-                              <h2><span class="counter-value">80</span>%</h2>
-                              <h6>Confirmed Deaths</h6>
+                              <h2>{{ $datas['meninggal']}}</h2>
+                              <h6>Meninggal</h6>
                            </div>
                         </div>
+                        @endforeach
+
                      </div>
                   </div>
                </div>
